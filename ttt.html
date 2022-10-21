@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="ttt.css" />
+    <script src="ttt.js"></script>
+  </head>
+  <body>
+    <span id="announcement"></span>
+    <div class="board">
+      <div class="column">
+        <div class="tile" onclick="clickTile(0, 0, event)"></div>
+        <div class="tile" onclick="clickTile(0, 1, event)"></div>
+        <div class="tile" onclick="clickTile(0, 2, event)"></div>
+      </div>
+      <div class="column">
+        <div class="tile" onclick="clickTile(1, 0, event)"></div>
+        <div class="tile" onclick="clickTile(1, 1, event)"></div>
+        <div class="tile" onclick="clickTile(1, 2, event)"></div>
+      </div>
+      <div class="column">
+        <div class="tile" onclick="clickTile(2, 0, event)"></div>
+        <div class="tile" onclick="clickTile(2, 1, event)"></div>
+        <div class="tile" onclick="clickTile(2, 2, event)"></div>
+      </div>
+    </div>
+  </body>
+</html>

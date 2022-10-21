@@ -1,0 +1,47 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column:not(:last-child) {
+  border-right: 1px black solid;
+}
+
+.tile {
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200px;
+
+  font-family: Verdana;
+
+  cursor: pointer;
+}
+
+.tile:not(:last-child) {
+  border-bottom: 1px black solid;
+}
+
+#announcement {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
