@@ -2,12 +2,22 @@
 // Who's turn is it?
 let turn = "X";
 
+// Who has used their superpowers?
+let used = {
+  X: false,
+  O: false
+}
+
 function clickTile(x, y, event) {
   const htmlElement = event.target;
 
-  // Tile may already be occupied
+  // Tile may already be occupied, only allow if they haven't used their superpower
   if (htmlElement.innerHTML != "") {
-    return;
+    if (used[turn]) {
+      return;
+    } else {
+      used[turn] = true;
+    }
   }
 
   if (turn == "X") { // If "X"s turn
@@ -19,9 +29,6 @@ function clickTile(x, y, event) {
     grid[y][x] = "O"; // Make it "O"s turn
     turn = "X";
   }
-
-  // Make the cursor say "not allowed"
-  htmlElement.style.cursor = "not-allowed";
 
   // Compute the winner
   const winner = checkWin();
